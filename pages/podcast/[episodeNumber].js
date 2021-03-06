@@ -17,7 +17,6 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const episodes = await getAllEpisodes();
   const paths = episodes.map(({ episodeNumber }) => {
-    console.log(episodeNumber);
     return { params: { episodeNumber: episodeNumber.toString() } };
   });
   return {

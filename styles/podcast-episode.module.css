@@ -1,0 +1,12 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.player {
+  width: 100%;
+}
+
+.description {
+  max-width: 65ch;
+}

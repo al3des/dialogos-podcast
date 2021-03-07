@@ -1,0 +1,21 @@
+.btnPlay {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play {
+  font-size: 5rem;
+}
+
+.volume {
+  transform: rotate(-90deg);
+  transform-origin: left;
+  width: 6em;
+}
+
+.hidden {
+  visibility: hidden;
+}

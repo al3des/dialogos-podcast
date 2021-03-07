@@ -1,5 +1,5 @@
-import { Card } from "react-bootstrap";
-import Link from "next/link";
+import { Card } from "react-bootstrap"
+import Link from "next/link"
 
 export default function EpisodeItem({ episode }) {
   return (
@@ -8,10 +8,10 @@ export default function EpisodeItem({ episode }) {
       <Card.Body>
         <Card.Title>{episode.title}</Card.Title>
         <Card.Text>{episode.desciption}</Card.Text>
-        <Link href={`/blog/${episode.number}`} variant="primary">
-          Read the article
+        <Link href={`/podcast/${episode.episodeNumber}`} variant="primary">
+          Go to the episode
         </Link>
       </Card.Body>
     </Card>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import Layout from "@components/Layout";
-import "@styles/globals.css";
-import Head from "next/head";
+import Layout from "@components/Layout"
+import "@styles/globals.css"
+import Head from "next/head"
 
 function Application({ Component, pageProps }) {
   return (
@@ -12,10 +12,14 @@ function Application({ Component, pageProps }) {
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
           crossorigin="anonymous"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+        ></link>
       </Head>
       <Component {...pageProps} />
     </Layout>
-  );
+  )
 }
 
-export default Application;
+export default Application

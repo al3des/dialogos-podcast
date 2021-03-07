@@ -8,11 +8,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+      <p className="description">
+        Get started by editing <code>pages/index.js</code>
+      </p>
     </>
   );
 }

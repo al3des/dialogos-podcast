@@ -1,27 +1,51 @@
 import styles from "./Nav.module.css";
 import Link from "next/link";
+import { Navbar, Nav } from "react-bootstrap";
+import { useRouter } from "next/router";
 
-export default function Nav() {
+export default function MyNav() {
+  const router = useRouter();
+  router.pathname.includes("/blog")
+    ? console.log(router)
+    : console.log("not included");
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>unforseen incidents</div>
-      <ul className={styles.nav}>
-        <li>
-          <Link href="/">home</Link>
-        </li>
-        <li>
-          <Link href="/blog">blog</Link>
-        </li>
-        <li>
-          <Link href="podcast">podcast</Link>
-        </li>
-        <li>
-          <Link href="/about">about</Link>
-        </li>
-        <li>
-          <Link href="contact">contact</Link>
-        </li>
-      </ul>
-    </nav>
+    <Navbar classsName={styles.nav}>
+      <Navbar.Brand>
+        <Link href="/">unforseen incidents</Link>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse>
+        <Nav activeKey={router.route}>
+          <Nav.Item>
+            <Link href="/" passHref>
+              <Nav.Link>home</Nav.Link>
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link href="/podcast" passHref>
+              <Nav.Link
+                className={router.pathname.includes("/podcast") ? "active" : ""}
+              >
+                podcast
+              </Nav.Link>
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link href="/blog" passHref>
+              <Nav.Link
+                className={router.pathname.includes("/blog") ? "active" : ""}
+              >
+                blog
+              </Nav.Link>
+            </Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link href="/about" passHref>
+              <Nav.Link>about</Nav.Link>
+            </Link>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

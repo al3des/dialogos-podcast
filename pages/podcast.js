@@ -1,24 +1,16 @@
+import styles from "@styles/podcast.module.css";
+
 import { getAllEpisodes } from "lib/graphcms";
 
-import Link from "next/link";
+import EpisodeItem from "@components/podcast/EpisodeItem";
 
 export default function Podcast({ episodes }) {
   return (
-    <>
-      <ul>
-        {episodes.map((episode) => (
-          <li>
-            <Link
-              key={episode.title}
-              href={`/podcast/${episode.episodeNumber}`}
-            >
-              {episode.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <pre>{JSON.stringify(episodes, null, 2)}</pre>
-    </>
+    <div className={styles.grid}>
+      {episodes.map((episode) => (
+        <EpisodeItem episode={episode} />
+      ))}
+    </div>
   );
 }
 

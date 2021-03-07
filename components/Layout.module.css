@@ -1,4 +1,7 @@
 .container {
   max-width: 80%;
   margin: 0 auto;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 100px 4fr minmax(200px, 1fr);
 }

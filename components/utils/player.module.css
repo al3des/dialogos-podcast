@@ -1,3 +1,8 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
 .btnPlay {
   width: 6rem;
   height: 6rem;
@@ -6,14 +11,23 @@
   justify-content: center;
 }
 
-.play {
-  font-size: 5rem;
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.volume {
-  transform: rotate(-90deg);
-  transform-origin: left;
-  width: 6em;
+.controls input {
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: center;
+  width: 3em;
+  display: block;
+}
+
+.play {
+  font-size: 5rem;
 }
 
 .hidden {

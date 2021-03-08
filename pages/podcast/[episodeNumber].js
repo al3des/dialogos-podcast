@@ -1,9 +1,9 @@
-import AudioPlayer from "@components/utils/player"
-import styles from "@styles/podcast-episode.module.css"
-import { getAllEpisodes, getEpisodeByEpisodeNumber } from "lib/graphcms"
-import Head from "next/head"
+import AudioPlayer from "@components/utils/player";
+import styles from "@styles/podcast-episode.module.css";
+import { getAllEpisodes, getEpisodeByEpisodeNumber } from "lib/graphcms";
+import Head from "next/head";
 
-import Image from "next/image"
+import Image from "next/image";
 
 export default function PodcastEpisode({ episode }) {
   return (
@@ -16,7 +16,7 @@ export default function PodcastEpisode({ episode }) {
         {episode.title}
       </h1>
       <div className={styles.root}>
-        <div clasSName={styles.audioFile}>
+        <div className={styles.audioFile}>
           <AudioPlayer src={episode.audioFile.url} />
         </div>
         <Image
@@ -29,26 +29,26 @@ export default function PodcastEpisode({ episode }) {
         <div className={styles.notes}>{episode.showNotes}</div>
       </div>
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ params }) {
-  const episode = await getEpisodeByEpisodeNumber(Number(params.episodeNumber))
+  const episode = await getEpisodeByEpisodeNumber(Number(params.episodeNumber));
 
   return {
     props: {
       episode,
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const episodes = await getAllEpisodes()
+  const episodes = await getAllEpisodes();
   const paths = episodes.map(({ episodeNumber }) => {
-    return { params: { episodeNumber: episodeNumber.toString() } }
-  })
+    return { params: { episodeNumber: episodeNumber.toString() } };
+  });
   return {
     paths,
     fallback: false,
-  }
+  };
 }

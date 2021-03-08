@@ -1,12 +1,12 @@
-import styles from "./Nav.module.css"
-import Link from "next/link"
-import { Navbar, Nav } from "react-bootstrap"
-import { useRouter } from "next/router"
+import styles from "./Nav.module.css";
+import Link from "next/link";
+import { Navbar, Nav } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 export default function MyNav() {
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <Navbar classsName={styles.nav}>
+    <Navbar>
       <Navbar.Brand>
         <Link href="/">unforseen incidents</Link>
       </Navbar.Brand>
@@ -44,5 +44,5 @@ export default function MyNav() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
+  );
 }

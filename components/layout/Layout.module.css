@@ -1,0 +1,21 @@
+.container {
+  max-width: 80%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-rows: 1fr minmax(90vh, 100%) auto;
+  /* grid-template-rows: 100px 4fr minmax(200px, 1fr); */
+}
+
+.main {
+  grid-row: 2 / 3;
+}
+
+.audioPlayer {
+  position: fixed;
+  width: 80%;
+  margin: 0 auto;
+  bottom: 0;
+  left: 10%;
+}

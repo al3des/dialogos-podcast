@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PostItem({ post }) {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card>
       <Card.Img variant="top" src={post.coverImage.url} />
       <Card.Body>
         <Card.Title>{post.title}</Card.Title>

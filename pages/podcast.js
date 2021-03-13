@@ -8,7 +8,7 @@ export default function Podcast({ episodes }) {
   return (
     <div className={styles.grid}>
       {episodes.map((episode) => (
-        <EpisodeItem episode={episode} />
+        <EpisodeItem key={episode.id} episode={episode} />
       ))}
     </div>
   );

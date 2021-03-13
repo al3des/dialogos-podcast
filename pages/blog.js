@@ -1,16 +1,15 @@
+import styles from "styles/blog.module.css";
 import { getAllPosts } from "lib/graphcms";
 
 import PostItem from "@components/blog/PostItem";
 
-import Link from "next/link";
-
 export default function Blog({ posts }) {
   return (
-    <>
+    <div className={styles.grid}>
       {posts.map((post) => (
         <PostItem post={post} />
       ))}
-    </>
+    </div>
   );
 }
 

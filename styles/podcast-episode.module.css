@@ -1,10 +1,29 @@
 .root {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  overflow-y: auto;
 }
 
-.player {
-  width: 100%;
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+}
+.audioFile {
+  position: relative;
+}
+
+.btn {
+  width: 2em;
+  height: 2em;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn:focus {
+  border: none;
+  box-shadow: none;
 }
 
 .description {

@@ -1,4 +1,3 @@
-import styles from "./Nav.module.css";
 import Link from "next/link";
 import { Navbar, Nav } from "react-bootstrap";
 import { useRouter } from "next/router";
@@ -6,7 +5,7 @@ import { useRouter } from "next/router";
 export default function MyNav() {
   const router = useRouter();
   return (
-    <Navbar className="p-0 mb-4">
+    <Navbar className="px-0">
       <Navbar.Brand>
         <Link href="/">unforseen incidents</Link>
       </Navbar.Brand>

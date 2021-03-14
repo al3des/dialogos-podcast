@@ -17,11 +17,13 @@ export default function Layout({ children }) {
           <Footer />
         </div>
       </div>
-      {audioFile && (
-        <div className={styles.audioPlayer}>
-          <MyAudioPlayer play={play} src={audioFile} />
-        </div>
-      )}
+      <div
+        className={`${styles.audioPlayer} ${
+          !audioFile ? styles.defaultStyle : styles.transitionStyle
+        }`}
+      >
+        {audioFile && <MyAudioPlayer play={play} src={audioFile} />}
+      </div>
     </>
   );
 }

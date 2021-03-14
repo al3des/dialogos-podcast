@@ -12,7 +12,7 @@ export default function MyAudioPlayer({ src, play }) {
 
   return (
     <>
-      <AudioPlayer ref={player} autoPlay preload="metadata" src={src} />
+      <AudioPlayer ref={player} preload="metadata" src={src} />
     </>
   );
 }

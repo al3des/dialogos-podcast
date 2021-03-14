@@ -1,7 +1,7 @@
-import styles from "styles/home.module.css";
-import Head from "next/head";
-import Link from "next/link";
-import { Card } from "react-bootstrap";
+import styles from "styles/home.module.css"
+import Head from "next/head"
+import Link from "next/link"
+import { Card } from "react-bootstrap"
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Card>
           <Card.Header className="display-4">
             <span className="mr-4">
-              <i class="bi bi-broadcast"></i>
+              <i className="bi bi-broadcast"></i>
             </span>
             Podcast
           </Card.Header>
@@ -31,7 +31,7 @@ export default function Home() {
         <Card>
           <Card.Header className="display-4">
             <span className="mr-4">
-              <i class="bi bi-pencil-square"></i>
+              <i className="bi bi-pencil-square"></i>
             </span>
             Blog
           </Card.Header>
@@ -46,5 +46,5 @@ export default function Home() {
         </Card>
       </div>
     </>
-  );
+  )
 }

@@ -1,3 +1,11 @@
+import Head from "next/head";
 export default function Contact() {
-  return <h1>Contact page</h1>;
+  return (
+    <>
+      <Head>
+        <title>Get in touch !</title>
+      </Head>
+      <h1>Contact page</h1>
+    </>
+  );
 }

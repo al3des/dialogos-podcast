@@ -1,16 +1,21 @@
 import styles from "@styles/podcast.module.css";
-
+import Head from "next/head";
 import { getAllEpisodes } from "lib/graphcms";
 
 import EpisodeItem from "@components/podcast/EpisodeItem";
 
 export default function Podcast({ episodes }) {
   return (
-    <div className={styles.grid}>
-      {episodes.map((episode) => (
-        <EpisodeItem key={episode.id} episode={episode} />
-      ))}
-    </div>
+    <>
+      <Head>
+        <title>Podcast</title>
+      </Head>
+      <div className={styles.grid}>
+        {episodes.map((episode) => (
+          <EpisodeItem key={episode.id} episode={episode} />
+        ))}
+      </div>
+    </>
   );
 }
 
